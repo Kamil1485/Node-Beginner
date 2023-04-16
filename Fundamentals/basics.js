@@ -13,5 +13,5 @@ setTimeout(()=>{
     clearInterval(x);
 },2023)
  */
-console.log(__dirname)//C:\Users\efsan\Desktop\Node\NodeJs\Ninja
-console.log(__filename) //C:\Users\efsan\Desktop\Node\NodeJs\Ninja\basics.js
+console.log(__dirname)//klasör yolunu verir
+console.log(__filename) //dosya yolunu verir

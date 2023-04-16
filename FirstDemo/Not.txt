@@ -1,0 +1,25 @@
+Node.js ve Express.js kullanarak bir HTTP sunucusu oluşturma konusunda temel
+
+nodemon kullanımı:npm run start
+
+kurulum
+npm init//package.json  oluştur.
+npm install express
+npm install ejs 
+terminal
+npm app.js ile  HTTP sunucusunu başlat
+belirlenen port numarasında http://localhost:3000  uygulama çalışır
+
+npm i nodemon
+otomatik yapılan değişiklikleri algılayıp projeyi güncelleme pakati
+start scriptini:nodemon app.js(proje yolu) olarak ekle.
+npm start  ile nodemonu calıstır.
+import express kullanımı için type:"module"  scriptini packgage.json a ekle
+
+***********************************************************************************
+Express-Routing
+Express'te yönlendirme işlemi, HTTP metodlarına (GET, POST, PUT, DELETE vb.) ve URL yollarına göre yapılandırılır.
+Örneğin, aşağıdaki kod, "http://localhost:3000/" adresindeki GET isteklerini karşılar:
+
+Önemli:
+nodemon u yeniden başlat güncelleme olmuyor ise ekranda //npm start

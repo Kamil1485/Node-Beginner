@@ -1,0 +1,4 @@
+npm install express ejs
+"start": "nodemon \"C:/Users/efsan/Desktop/NodeJs/FirstDemo/views/index.js\""
+nodemon ile calıstırabilirsin düzenlemeyle
+npm start

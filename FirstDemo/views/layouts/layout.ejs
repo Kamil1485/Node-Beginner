@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <header>
+        <!-- Ortak header kodları buraya gelebilir -->
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Dinamik sayfa içeriği buraya gelecek -->
+        <p>Body Bölümü</p>
+        <%- body %>
+    </main>
+
+    <footer>
+        <!-- Ortak footer kodları buraya gelebilir -->
+    </footer>
+</body>
+
+</html>

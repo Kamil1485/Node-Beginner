@@ -1,0 +1,5 @@
+npm i express
+npm i nodemon
+npm i ejs
+//post verilerini almak için
+npm i body-parser

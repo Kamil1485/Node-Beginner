@@ -1,0 +1,2 @@
+streams ile verilerin hepsi okunmadan okumaya başlayabiliriz.
+veriler buffer olarak parça parça okunur bizde  o ana kadar okunan dosyalar üzerinden okuma yaparız.

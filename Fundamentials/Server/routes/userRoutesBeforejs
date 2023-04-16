@@ -1,0 +1,62 @@
+const express = require("express");
+let users = require("../data");
+const router = express.Router();
+
+//*5
+router.get("/contact", (req, res) => {
+  // /contact adresine istek geldiğinde contact.html dosyası gösterilir.
+  res.render("contact", { title: "Contact Page", header: "Contact Header" });
+});
+//*10
+router.post("/contact", (req, res, next) => {
+  let id = users.length + 1;
+  const { username, email, message } = req.body;
+  let newuser = { id: id, username: username, email: email, message: message };
+  id++;
+  if (username && message) {
+    users.push(newuser);
+    res.redirect("/users");
+  } else {
+    next({
+      message:!username? "Username alanı eksik!":"Message alanı eksik!",
+      statusCode: 404,
+    });
+  }
+});
+
+router.delete("/users/:id", (req, res, next) => {
+  const id = parseInt(req.params.id);
+  const deleted = users.find((user) => user.id === id);
+  if (deleted) {
+    users = users.filter((user) => user.id !== id);
+    res.send("Kullanıcı Silindi");
+  } else {
+    next({
+      message: "Silme işlemi başarısız",
+      statusCode: 404,
+    });
+  }
+});
+
+console.log(users);
+
+//*5
+router.get("/users", (req, res) => {
+  res.render("users", {
+    title: "Users Page",
+    header: "Users Header",
+    users: users,
+  }); //users a istek geldiğinde,render metoduyla users.ejs dosyası görüntülenir.
+});
+//*6
+router.get("/users/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const user = users.find((user) => user.id === id);
+  res.render("userinfo", {
+    title: "Userinfo Page",
+    header: "Userinfo Header",
+    user: user,
+  });
+});
+
+module.exports = router;
